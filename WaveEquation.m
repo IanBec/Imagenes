@@ -23,8 +23,8 @@ ylabel y
 u0 = @(location) atan(cos((pi*location.x)/2));
 ut0 = @(location) 3*sin(pi*location.x).*exp(sin((pi*location.y)/2));
 setInitialConditions(model,u0,ut0);
-%% 5
-n = 31;
+%% 5%%
+%%n = 31;
 tlist = linspace(0,5,n);
 model.SolverOptions.ReportStatistics ='on';
 result = solvepde(model,tlist);
